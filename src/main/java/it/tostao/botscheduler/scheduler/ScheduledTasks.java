@@ -22,7 +22,7 @@ public class ScheduledTasks {
 	@Scheduled(fixedRate = 5000)
 	public void printTime() {
 		log.info("Time is {}", dateFormat.format(new Date()));
-		Application application = new Application("wykop-bot", "xUg8fD0yHnaA0kpC4Flf");
+		Application application = new Application("wykop-bot", "test");
 	}
 
 }
