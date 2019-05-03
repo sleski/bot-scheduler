@@ -5,5 +5,4 @@ package it.tostao.botscheduler.bot;
  */
 public class WykopBot {
 
-
 }
