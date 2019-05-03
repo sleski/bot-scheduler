@@ -1,5 +1,6 @@
 package it.tostao.botscheduler.scheduler;
 
+import com.crozin.wykop.sdk.Application;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -21,6 +22,7 @@ public class ScheduledTasks {
 	@Scheduled(fixedRate = 5000)
 	public void printTime() {
 		log.info("Time is {}", dateFormat.format(new Date()));
+		Application application = new Application("wykop-bot", "xUg8fD0yHnaA0kpC4Flf");
 	}
 
 }
