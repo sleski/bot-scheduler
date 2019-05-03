@@ -16,11 +16,18 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * Created by Slawomir Leski on 18-03-2019.
  */
-@RequestMapping("/user")
+@RequestMapping("/")
 @RestController
-public class UserController {
+public class HomeController {
 
-	private static final Logger log = LoggerFactory.getLogger(UserController.class);
+	private static final Logger log = LoggerFactory.getLogger(HomeController.class);
+
+	@RequestMapping(value = "/counter", method = RequestMethod.GET)
+	@ResponseBody
+	public ResponseEntity<String> home() {
+		log.info("Home controller triggeres");
+		return new ResponseEntity<>("Welcome home!", HttpStatus.OK);
+	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	@ResponseBody
