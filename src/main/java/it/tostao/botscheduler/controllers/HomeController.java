@@ -22,7 +22,7 @@ public class HomeController {
 
 	private static final Logger log = LoggerFactory.getLogger(HomeController.class);
 
-	@RequestMapping(value = "/counter", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	@ResponseBody
 	public ResponseEntity<String> home() {
 		log.info("Home controller triggeres");
