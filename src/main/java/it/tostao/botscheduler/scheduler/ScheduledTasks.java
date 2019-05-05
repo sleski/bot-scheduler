@@ -19,7 +19,7 @@ public class ScheduledTasks {
 
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
-	@Scheduled(fixedRate = 5000)
+	@Scheduled(fixedRate = 30000)
 	public void printTime() {
 		log.info("Time is {}", dateFormat.format(new Date()));
 		Application application = new Application("wykop-bot", "test");
