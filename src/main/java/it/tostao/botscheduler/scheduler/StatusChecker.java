@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.ResponseEntity;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
@@ -25,7 +24,7 @@ public class StatusChecker {
 	private final String APP_PLACEHOLDER = "APP_NAME";
 	private final String HEROKU_APP_PATTERN = "https://" + APP_PLACEHOLDER + ".herokuapp.com/";
 
-	@Scheduled(cron="0 0/20 * * * ?")
+//	@Scheduled(cron="0 0/20 * * * ?")
 	public void checkStatusApps() {
 
 		RestTemplateBuilder templateBuilder = new RestTemplateBuilder();
